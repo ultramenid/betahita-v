@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betahita v2</title>
+    <link href="style/output.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+<body class="font-sans">
+    <!-- header -->
+    <div class='max-w-7xl mx-auto py-4' x-data="{search:false}">
+            <svg @click="search=true, $nextTick(() => { $refs.input.focus(); })"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" :class="search ? 'hidden' : 'h-4 w-4 mt-2 cursor-pointer'">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+            
+            <form @click.outside="search=false" x-show="search" action="" method="get" class="flex justify-between items-center relative">
+                <input autofocus name="search" x-ref="input" class="border border-white px-10 py-2 bg-gray-100 w-full focus:outline-none text-sm text-gray-500" type="text" placeholder="Search minimal 3 character..." />
+                <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 h-4 w-4 text-black" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                </svg>
+                <svg @click="search=false" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=" cursor-pointer absolute right-3 h-4 w-4 text-black">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </form>
+        
+
+        <div class='flex justify-between mt-6 items-center'>
+            <div class='uppercase font-semibold sm:w-4/12 w-full text-sm'>SENIN, 29 JANUARI 2024</div>
+            <div class='sm:w-4/12 w-full flex justify-center'>
+                <img src="https://betahita.id/assets/images/Logo-Betahita.png" alt="betahita"  class="h-[72px] "/>
+            </div>
+            <div class='sm:w-4/12 w-full gap-1 flex justify-end items-center'>
+                <a href="detail.html" class="uppercase font-semibold text-sm">INDEKS KARBON</a>
+                <a href="detail.html" class="uppercase  text-green-500 text-xs">+0.06%</a>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- nav -->
+    <div class='max-w-7xl mx-auto px-4 py-4 border-b-2 border-black border-t mt-2'>
+        <div class='max-w-3xl mx-auto flex justify-between items-center'>
+            <a href="detail.html"  class='text-sm'>HOME</a>
+            <a href="detail.html"  class='text-sm'>BERITA</a>
+            <a href="detail.html"  class='text-sm'>IN DEPTH</a>
+            <a href="detail.html"  class='text-sm'>OPINI</a>
+            <a href="detail.html"  class='text-sm'>PLATFORM</a>
+            <a href="detail.html"  class='text-sm'>VADEMEKUM</a>
+            <a href="detail.html"  class='text-sm'>INDEKS</a>
+        </div>
+    </div>
+
+    <!-- content -->
+    <div class="max-w-7xl mx-auto mt-6 flex gap-3">
+        <!-- left -->
+        <div class="sm:w-9/12 w-full border-r-[0.4px] border-black pr-4 ">
+            <!-- sorot -->
+             <div class="pb-12 border-b-[0.4px] border-black flex gap-6 ">
+                <div class="w-4/12 flex flex-col gap-6">
+                    <div class="flex flex-col gap-4 pb-4 border-b-[0.4px] border-black">
+                        <a href="detail.html" class="text-xl font-semibold">Mau Kaget? Ini Provinsi Juara Karhutla Versi Mapbiomas Indonesia Fire</a>
+                        <p class="text-sm">Mapbiomas Indonesia Fire yang terbuka diakses publik juga mencatat total luas kebakaran di Indonesia dari 2013-2023 lebih besar sekitar 1,3 juta hektare</p>
+                    </div>
+
+                    <div class="flex flex-col gap-4 pb-4 border-b-[0.4px] border-black">
+                        <a href="detail.html" class="text-xl font-bold">10 Tahun, Area Seluas Separuh Jawa Hangus</a>
+                        <p class="text-sm">Mapbiomas Indonesia Fire yang terbuka diakses publik juga mencatat total luas kebakaran di Indonesia dari 2013-2023 lebih besar sekitar 1,3 juta hektare</p>
+                    </div>
+
+                    <div class="flex flex-col gap-4 pb-4 border-b-[0.4px] border-black">
+                        <a href="detail.html" class="text-xl font-bold">Di Kallista Alam, Hukum Jalan, Karhutla Berulang</a>
+                        <p class="text-sm">Mapbiomas Indonesia Fire yang terbuka diakses publik juga mencatat total luas kebakaran di Indonesia dari 2013-2023 lebih besar sekitar 1,3 juta hektare</p>
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <a href="detail.html" class="text-xl font-bold">Mau Kaget? Ini Provinsi Juara Karhutla Versi Mapbiomas Indonesia Fire</a>
+                    </div>
+                </div>
+                <div class="w-8/12">
+                    <img src="https://s3-alpha-sig.figma.com/img/f7d9/828d/06e634452f4878ea8b8c1f5e87713f5a?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qMt5GWlxCx~dVRpUN3Z0wSNZTAh~OzP3UY0pmRMrimHRMg7DYRMmUOIuQ8Xo7-J3C5JxwvQaWyKoZkw59BswIVvYve3PiejKt27FLVJlnaLqw6aqpgkKFwInLhmYKbwroBf1IcAiUQXYFqmUdGUYENHYWAG2kq0nR3xUjiORZps0iTQlknH~uL1d6t-A9CJnq5Uuu32jczedwHWNAvPiPaw6MPXae7oh5204RoaCsVXLNCx7dQG4bn85Devc8tmXcXJTHN30pObGfKqKaEE0pB3bypUJQiqm3F0rBMaaRsjzef11LQYZWWGf6av01~n27zc9zmW4lYS3j2eWUurwkw__" alt="betahita" class="w-full h-96 object-cover">
+                </div>
+             </div>
+
+             <div class="pb-12 border-b-[0.4px] border-black flex gap-6 mt-6">
+                <div class="w-4/12 flex flex-col gap-6">
+                    <div class="flex flex-col gap-4 pb-4 ">
+                        <a href="detail.html" class="text-xl font-semibold">Mau Kaget? Ini Provinsi Juara Karhutla Versi Mapbiomas Indonesia Fire</a>
+                        <p class="text-sm">Mapbiomas Indonesia Fire yang terbuka diakses publik juga mencatat total luas kebakaran di Indonesia dari 2013-2023 lebih besar sekitar 1,3 juta hektare</p>
+                    </div>
+                </div>
+                <div class="w-8/12">
+                    <img src="https://s3-alpha-sig.figma.com/img/f7d9/828d/06e634452f4878ea8b8c1f5e87713f5a?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qMt5GWlxCx~dVRpUN3Z0wSNZTAh~OzP3UY0pmRMrimHRMg7DYRMmUOIuQ8Xo7-J3C5JxwvQaWyKoZkw59BswIVvYve3PiejKt27FLVJlnaLqw6aqpgkKFwInLhmYKbwroBf1IcAiUQXYFqmUdGUYENHYWAG2kq0nR3xUjiORZps0iTQlknH~uL1d6t-A9CJnq5Uuu32jczedwHWNAvPiPaw6MPXae7oh5204RoaCsVXLNCx7dQG4bn85Devc8tmXcXJTHN30pObGfKqKaEE0pB3bypUJQiqm3F0rBMaaRsjzef11LQYZWWGf6av01~n27zc9zmW4lYS3j2eWUurwkw__" alt="betahita" class="w-full h-96 object-cover">
+                </div>
+             </div>
+
+             <div class="pb-12 border-b-[0.4px] border-black flex gap-6 mt-6">
+                <div class="w-4/12 flex flex-col gap-6">
+                    <div class="flex flex-col gap-4 pb-4 ">
+                        <a href="detail.html" class="text-xl font-semibold">Mau Kaget? Ini Provinsi Juara Karhutla Versi Mapbiomas Indonesia Fire</a>
+                        <p class="text-sm">Mapbiomas Indonesia Fire yang terbuka diakses publik juga mencatat total luas kebakaran di Indonesia dari 2013-2023 lebih besar sekitar 1,3 juta hektare</p>
+                    </div>
+                </div>
+                <div class="w-8/12">
+                    <img src="https://s3-alpha-sig.figma.com/img/f7d9/828d/06e634452f4878ea8b8c1f5e87713f5a?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qMt5GWlxCx~dVRpUN3Z0wSNZTAh~OzP3UY0pmRMrimHRMg7DYRMmUOIuQ8Xo7-J3C5JxwvQaWyKoZkw59BswIVvYve3PiejKt27FLVJlnaLqw6aqpgkKFwInLhmYKbwroBf1IcAiUQXYFqmUdGUYENHYWAG2kq0nR3xUjiORZps0iTQlknH~uL1d6t-A9CJnq5Uuu32jczedwHWNAvPiPaw6MPXae7oh5204RoaCsVXLNCx7dQG4bn85Devc8tmXcXJTHN30pObGfKqKaEE0pB3bypUJQiqm3F0rBMaaRsjzef11LQYZWWGf6av01~n27zc9zmW4lYS3j2eWUurwkw__" alt="betahita" class="w-full h-96 object-cover">
+                </div>
+             </div>
+
+             <!-- terkini -->
+             <div class="pb-12 border-b-[0.4px] border-black  gap-6 mt-6">
+                <a href="detail.html" class="font-black">BERITA TERKINI</a>
+                <div class="flex justify-between gap-6 mt-3">
+                    <div class="flex flex-col gap-4">
+                        <div class="bg-black w-72 h-44"></div>
+                        <a href="detail.html" class="font-bold">Banyak Masalah Investasi Nikel China di Sulteng</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="bg-black w-72 h-44"></div>
+                        <a href="detail.html" class="font-bold">Banyak Masalah Investasi Nikel China di Sulteng</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="bg-black w-72 h-44"></div>
+                        <a href="detail.html" class="font-bold">Banyak Masalah Investasi Nikel China di Sulteng</a>
+                    </div>
+                </div>
+             </div>
+
+             <div class="pb-12 border-b-[0.4px] border-black flex gap-6 mt-6">
+                <div class="w-4/12 flex flex-col gap-6">
+                    <div class="flex flex-col gap-4 pb-4 ">
+                        <a href="detail.html" class="text-xl font-semibold">Mau Kaget? Ini Provinsi Juara Karhutla Versi Mapbiomas Indonesia Fire</a>
+                        <p class="text-sm">Mapbiomas Indonesia Fire yang terbuka diakses publik juga mencatat total luas kebakaran di Indonesia dari 2013-2023 lebih besar sekitar 1,3 juta hektare</p>
+                    </div>
+                </div>
+                <div class="w-8/12">
+                    <img src="https://s3-alpha-sig.figma.com/img/f7d9/828d/06e634452f4878ea8b8c1f5e87713f5a?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qMt5GWlxCx~dVRpUN3Z0wSNZTAh~OzP3UY0pmRMrimHRMg7DYRMmUOIuQ8Xo7-J3C5JxwvQaWyKoZkw59BswIVvYve3PiejKt27FLVJlnaLqw6aqpgkKFwInLhmYKbwroBf1IcAiUQXYFqmUdGUYENHYWAG2kq0nR3xUjiORZps0iTQlknH~uL1d6t-A9CJnq5Uuu32jczedwHWNAvPiPaw6MPXae7oh5204RoaCsVXLNCx7dQG4bn85Devc8tmXcXJTHN30pObGfKqKaEE0pB3bypUJQiqm3F0rBMaaRsjzef11LQYZWWGf6av01~n27zc9zmW4lYS3j2eWUurwkw__" alt="betahita" class="w-full h-96 object-cover">
+                </div>
+             </div>
+
+             <div class="pb-12 flex gap-6 mt-6">
+                <div class="w-4/12 flex flex-col gap-6">
+                    <div class="flex flex-col gap-4 pb-4 ">
+                        <a href="detail.html" class="text-xl font-semibold">Mau Kaget? Ini Provinsi Juara Karhutla Versi Mapbiomas Indonesia Fire</a>
+                        <p class="text-sm">Mapbiomas Indonesia Fire yang terbuka diakses publik juga mencatat total luas kebakaran di Indonesia dari 2013-2023 lebih besar sekitar 1,3 juta hektare</p>
+                    </div>
+                </div>
+                <div class="w-8/12">
+                    <img src="https://s3-alpha-sig.figma.com/img/f7d9/828d/06e634452f4878ea8b8c1f5e87713f5a?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qMt5GWlxCx~dVRpUN3Z0wSNZTAh~OzP3UY0pmRMrimHRMg7DYRMmUOIuQ8Xo7-J3C5JxwvQaWyKoZkw59BswIVvYve3PiejKt27FLVJlnaLqw6aqpgkKFwInLhmYKbwroBf1IcAiUQXYFqmUdGUYENHYWAG2kq0nR3xUjiORZps0iTQlknH~uL1d6t-A9CJnq5Uuu32jczedwHWNAvPiPaw6MPXae7oh5204RoaCsVXLNCx7dQG4bn85Devc8tmXcXJTHN30pObGfKqKaEE0pB3bypUJQiqm3F0rBMaaRsjzef11LQYZWWGf6av01~n27zc9zmW4lYS3j2eWUurwkw__" alt="betahita" class="w-full h-96 object-cover">
+                </div>
+             </div> 
+
+            
+        </div>
+
+        <!-- right -->
+         <div class="sm:w-3/12 w-full ">
+            <a href="detail.html" class="font-black">INFOGRAPHIC</a>
+            <div class="flex flex-col gap-3 pb-4 border-b-[0.4px] border-black">
+                <img src="https://cdn.betahita.id/6/8/5/8/6858.jpeg" alt="betahita" class="w-full mt-3 h-96 object-cover">
+                <p class="text-xl font-semibold">Deforestasi Tahunan di Tanah Papua</p>
+            </div>
+            <div class="flex gap-3 pb-4 border-b-[0.4px] border-black mt-4 ">
+                <div class="flex flex-col gap-3  sm:w-6/12 w-full  ">
+                    <img src="https://cdn.betahita.id/6/8/5/8/6858.jpeg" alt="betahita" class="w-full  h-44 object-cover">
+                    <p class=" font-semibold">Deforestasi Tahunan di Tanah Papua</p>
+                </div>
+                <div class="border-r-[0.4px] border-black h-64" ></div>
+                <div class="flex flex-col gap-3 pb-4  sm:w-6/12 w-full ">
+                    <img src="https://cdn.betahita.id/6/8/5/8/6858.jpeg" alt="betahita" class="w-full  h-44 object-cover">
+                    <p class=" font-semibold">Deforestasi Tahunan di Tanah Papua</p>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <a href="detail.html" class="font-black mb-4">OPINI</a>
+                <div class="flex flex-col gap-2">
+                    <div class="flex flex-col pb-2 border-b-[0.4px] border-black">
+                        <h4 class="text-xs text-gray-500 italic">Timer Manurung</h4>
+                        <a href="detail.html" class="font-semibold">Sah! Sulawesi Jadi Kerajaan Ular Endemik Terbesar di Indonesia</a>
+                    </div>
+                    <div class="flex flex-col pb-2 border-b-[0.4px] border-black">
+                        <h4 class="text-xs text-gray-500 italic">Timer Manurung</h4>
+                        <a href="detail.html" class="font-semibold">Sah! Sulawesi Jadi Kerajaan Ular Endemik Terbesar di Indonesia</a>
+                        <img class="mt-2" src="https://s3-alpha-sig.figma.com/img/f7d9/828d/06e634452f4878ea8b8c1f5e87713f5a?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qMt5GWlxCx~dVRpUN3Z0wSNZTAh~OzP3UY0pmRMrimHRMg7DYRMmUOIuQ8Xo7-J3C5JxwvQaWyKoZkw59BswIVvYve3PiejKt27FLVJlnaLqw6aqpgkKFwInLhmYKbwroBf1IcAiUQXYFqmUdGUYENHYWAG2kq0nR3xUjiORZps0iTQlknH~uL1d6t-A9CJnq5Uuu32jczedwHWNAvPiPaw6MPXae7oh5204RoaCsVXLNCx7dQG4bn85Devc8tmXcXJTHN30pObGfKqKaEE0pB3bypUJQiqm3F0rBMaaRsjzef11LQYZWWGf6av01~n27zc9zmW4lYS3j2eWUurwkw__" alt="betahita">
+                    </div>
+                    <div class="flex flex-col pb-2 border-b-[0.4px] border-black">
+                        <h4 class="text-xs text-gray-500 italic">Timer Manurung</h4>
+                        <a href="detail.html" class="font-semibold">Sah! Sulawesi Jadi Kerajaan Ular Endemik Terbesar di Indonesia</a>
+                    </div>
+                    <div class="flex flex-col pb-2 border-b-[0.4px] border-black">
+                        <h4 class="text-xs text-gray-500 italic">Timer Manurung</h4>
+                        <a href="detail.html" class="font-semibold">Sah! Sulawesi Jadi Kerajaan Ular Endemik Terbesar di Indonesia</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            
+         </div>
+    </div>
+
+    <!-- tematik -->
+    <div class="max-w-7xl mx-auto py-6 border-t-2 border-b-2 border-black mt-5 ">
+        <a href="detail.html" class="font-black">BERITA LAINYA</a>
+        <div class="flex justify-between gap-6 mt-3">
+            <div>
+                <a href="detail.html" class="text-sm font-black">HUTAN</a>
+                <div class="flex flex-col gap-4">
+                    <div class="bg-black w-72 h-44"></div>
+                    <a href="detail.html" class="font-bold">Banyak Masalah Investasi Nikel China di Sulteng</a>
+                    <a href="detail.html" class="font-bold">Banyak Masalah Investasi Nikel China di Sulteng</a>
+                    <a href="detail.html" class="font-bold">Banyak Masalah Investasi Nikel China di Sulteng</a>
+                </div>
+            </div>
+            <div>
+                <a href="detail.html" class="text-sm font-black">TAMBANG</a>
+                <div class="flex flex-col gap-4">
+                    <div class="bg-black w-72 h-44"></div>
+                    <a href="detail.html" class="font-bold">Banyak Masalah Investasi Nikel China di Sulteng</a>
+                    <a href="detail.html" class="font-bold">Banyak Masalah Investasi Nikel China di Sulteng</a>
+                    <a href="detail.html" class="font-bold">Banyak Masalah Investasi Nikel China di Sulteng</a>
+                </div>
+            </div>
+            <div>
+                <a href="detail.html" class="text-sm font-black">KEBUN</a>
+                <div class="flex flex-col gap-4">
+                    <div class="bg-black w-72 h-44"></div>
+                    <a href="detail.html" class="font-bold">Banyak Masalah Investasi Nikel China di Sulteng</a>
+                    <a href="detail.html" class="font-bold">Banyak Masalah Investasi Nikel China di Sulteng</a>
+                    <a href="detail.html" class="font-bold">Banyak Masalah Investasi Nikel China di Sulteng</a>
+                </div>
+            </div>
+            <div>
+                <a href="detail.html" class="text-sm font-black">LAUT</a>
+                <div class="flex flex-col gap-4">
+                    <div class="bg-black w-72 h-44"></div>
+                    <a href="detail.html" class="font-bold">Banyak Masalah Investasi Nikel China di Sulteng</a>
+                    <a href="detail.html" class="font-bold">Banyak Masalah Investasi Nikel China di Sulteng</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <!-- footer -->
+     <div class="max-w-7xl mx-auto py-12 border-b-[0.4px] border-black">
+
+        <img src="https://betahita.id/assets/images/Logo-Betahita.png" alt="betahita" class="h-10">
+
+        <div class="flex justify-between mt-12">
+            <div class="flex flex-col gap-2">
+                <a href="detail.html" class="text-sm font-black">BERITA</a>
+                <a href="detail.html" class="text-sm ">Hutan</a>
+                <a href="detail.html" class="text-sm ">Tambang</a>
+                <a href="detail.html" class="text-sm ">Kebun</a>
+                <a href="detail.html" class="text-sm ">Laut</a>
+            </div>
+            <div class="flex flex-col gap-2">
+                <a href="detail.html" class="text-sm font-black">IN DEPTH</a>
+                <a href="detail.html" class="text-sm ">Hutan</a>
+                <a href="detail.html" class="text-sm ">Tambang</a>
+                <a href="detail.html" class="text-sm ">Kebun</a>
+                <a href="detail.html" class="text-sm ">Laut</a>
+            </div>
+            <div class="flex flex-col gap-2">
+                <a href="detail.html" class="text-sm font-black">OPINI</a>
+                <a href="detail.html" class="text-sm ">Hutan</a>
+                <a href="detail.html" class="text-sm ">Tambang</a>
+                <a href="detail.html" class="text-sm ">Kebun</a>
+                <a href="detail.html" class="text-sm ">Laut</a>
+            </div>
+            <div class="flex flex-col gap-2">
+                <a href="detail.html" class="text-sm font-black">PLATFORM</a>
+                <a href="detail.html" class="text-sm ">Hutan</a>
+                <a href="detail.html" class="text-sm ">Tambang</a>
+                <a href="detail.html" class="text-sm ">Kebun</a>
+                <a href="detail.html" class="text-sm ">Laut</a>
+            </div>
+            <div class="flex flex-col gap-2">
+                <a href="detail.html" class="text-sm font-black">VADEMEKUM</a>
+                <a href="detail.html" class="text-sm ">Hutan</a>
+                <a href="detail.html" class="text-sm ">Tambang</a>
+                <a href="detail.html" class="text-sm ">Kebun</a>
+                <a href="detail.html" class="text-sm ">Laut</a>
+            </div>
+            <div class="flex flex-col gap-2">
+                <a href="detail.html" class="text-sm font-black">INDEKS</a>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <a href="detail.html" class="text-sm font-black">TENTANG BETAHITA</a>
+                <a href="detail.html" class="text-sm ">Pedoman Siber</a>
+                <a href="detail.html" class="text-sm ">Hubungi Kami</a>
+                <a href="detail.html" class="text-sm ">Redaksi</a>
+            </div>
+
+            <div class="flex flex-col justify-between  pl-6 border-l-[0.4px] border-black">
+                <a href="detail.html" class="text-sm font-black">ACCOUNT</a>
+                <div class="gap-2 flex flex-col">
+                   <div class="flex gap-1 items-center">
+                        <img src="assets/telegram.svg" alt="betahita" class="h-3">
+                        <a href="detail.html" class="text-xs">@betahita</a>
+                   </div>
+                   <div class="flex gap-2 items-center">
+                    <img src="assets/facebook.svg" alt="betahita" class="h-3">
+                    <img src="assets/linkedin.svg" alt="betahita" class="h-3">
+                    <img src="assets/x.svg" alt="betahita" class="h-3">
+                    <img src="assets/youtube.svg" alt="betahita" class="h-3">
+                    <img src="assets/instagram.svg" alt="betahita" class="h-3">
+                    <a href="detail.html" class="text-xs">@betahita</a>
+               </div>
+                </div>
+                
+            </div>
+        </div>
+     </div>
+</body>
+</html>
